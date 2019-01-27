@@ -1,0 +1,125 @@
+<?php
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * DcThresholds
+ *
+ * @ORM\Table(name="dc_thresholds")
+ * @ORM\Entity
+ */
+class DcThresholds
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="ID", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="temp_min", type="float", precision=3, scale=2, nullable=true)
+     */
+    private $tempMin;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="temp_max", type="float", precision=3, scale=2, nullable=true)
+     */
+    private $tempMax;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="temp_lastupdate", type="datetime", nullable=true)
+     */
+    private $tempLastupdate;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="humidity_min", type="float", precision=3, scale=2, nullable=true)
+     */
+    private $humidityMin;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="humidity_max", type="float", precision=3, scale=2, nullable=true)
+     */
+    private $humidityMax;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="humidity_lastupdate", type="datetime", nullable=true)
+     */
+    private $humidityLastupdate;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="farm_node_count", type="integer", nullable=true)
+     */
+    private $farmNodeCount;
+
+    /**
+     * @var int|null
+     *
+     * @ORM\Column(name="grid_node_count", type="integer", nullable=true)
+     */
+    private $gridNodeCount;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="grid_run_update", type="datetime", nullable=true)
+     */
+    private $gridRunUpdate;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="lan_min_throughput", type="float", precision=8, scale=2, nullable=true)
+     */
+    private $lanMinThroughput;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="wan_min_down", type="float", precision=8, scale=2, nullable=true)
+     */
+    private $wanMinDown;
+
+    /**
+     * @var float|null
+     *
+     * @ORM\Column(name="wan_min_up", type="float", precision=8, scale=2, nullable=true)
+     */
+    private $wanMinUp;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="network_lastupdate", type="datetime", nullable=true)
+     */
+    private $networkLastupdate;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getWanUp(): ?float
+    {
+        return $this->wan_up;
+    }
+
+}

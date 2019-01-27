@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>MAZRAA - Data Center Portal</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        {% block stylesheets %}
+            <!-- App Icons -->
+            <link rel="shortcut icon" href="{{ asset('assets/images/blue-bird.png') }}">
+
+            <!--Morris Chart CSS -->
+            <link rel="stylesheet" href="{{ asset('assets/plugins/morris/morris.css') }}">
+
+            <!-- App css -->
+            <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+
+            <!-- Custom css -->
+            <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/custom.css') }}">
+
+            <!-- Sweet Alert -->
+            <link href="{{ asset('assets/plugins/sweet-alert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css">
+
+            <!-- DataTables -->
+            <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('assets/plugins/datatables/buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+            <!-- Responsive datatable examples -->
+            <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+        {% endblock %}
+    </head>
+    <body onload="startTime()">
+
+        {% block header %}{% endblock %}
+        
+        {% block body %}{% endblock %}
+        
+        {% block footer %}{% endblock %}
+
+
+        {% block javascripts %}
+             <!-- jQuery  -->
+            <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+            <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
+            <script src="{{ asset('assets/js/waves.js') }}"></script>
+            <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
+            <!-- Chart JS -->
+            <!-- <script src="{{ asset('assets/plugins/chart.js/chart.min.js') }}"></script> -->
+            <!-- <script src="{{ asset('assets/pages/chartjs.init.js') }}"></script> -->
+            <script src="{{ asset('assets/plugins/peity-chart/jquery.peity.min.js') }}"></script>
+            <script src="assets/pages/Chart.bundle.js"></script>
+            <script src="assets/pages/chartjs-plugin-deferred.js"></script>
+
+            <!--Morris Chart-->
+            <script src="{{ asset('assets/plugins/morris/morris.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/raphael/raphael-min.js') }}"></script>
+
+            <script src="{{ asset('assets/pages/dashboard.js') }}"></script>        
+
+            <!-- Sweet-Alert  -->
+            <script src="{{ asset('assets/plugins/sweet-alert2/sweetalert2.min.js') }}"></script>
+            <script src="{{ asset('assets/pages/sweet-alert.init.js') }}"></script>
+
+             <!-- App js -->
+            <script src="{{ asset('assets/js/app.js') }}"></script>
+
+             <!-- KNOB JS -->
+            <script src="{{ asset('assets/plugins/jquery-knob/excanvas.js') }}"></script>
+            <script src="{{ asset('assets/plugins/jquery-knob/jquery.knob.js') }}"></script>
+
+            <!-- Required datatable js -->
+            <script src="{{ asset('assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
+
+            <!-- Buttons examples -->
+            <script src="{{ asset('assets/plugins/datatables/dataTables.buttons.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/buttons.bootstrap4.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/jszip.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/pdfmake.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/vfs_fonts.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/buttons.html5.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/buttons.print.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/buttons.colVis.min.js') }}"></script>
+
+            <!-- Responsive examples -->
+            <script src="{{ asset('assets/plugins/datatables/dataTables.responsive.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.js') }}"></script>
+
+            
+            <script>
+                function startTime() {
+                    var today=new Date();
+                    var h=today.getHours();
+                            var am_pm = today.getHours() >= 12 ? "PM" : "AM";
+                    var m=today.getMinutes();
+                    var s=today.getSeconds();
+                    // add a zero in front of numbers<10
+                    m=checkTime(m);
+                    s=checkTime(s);
+                    document.getElementById('realtime').innerHTML=h+" : "+m+" : "+s + " " + am_pm;;
+                    t=setTimeout('startTime()',500);
+                }
+
+                function checkTime(i) {
+                    if (i<10)
+                    {
+                    i="0" + i;
+                    }
+                    return i;
+                }
+            </script>
+        {% endblock %}
+        {% block externaljavascripts %}{% endblock %}
+    </body>
+</html>

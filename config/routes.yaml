@@ -1,0 +1,30 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+# the "Home" route 
+Home:
+    path: /
+    controller: App\Controller\HomeController::index
+Login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+Logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+Node Api:
+    path: /api/nodes/{key}
+    controller: App\Controller\RestApiController::nodeapi
+Update nodes:
+    path: /api/update/nodes/{key}
+    controller: App\Controller\RestApiController::update_nodes
+Get Environment:
+    path: /api/get/environment/{key}
+    controller: App\Controller\RestApiController::get_environment
+Update Environment:
+    path: /api/update/environment/{key}
+    controller: App\Controller\RestApiController::update_environment
+Get Network:
+    path: /api/get/network/{key}
+    controller: App\Controller\RestApiController::get_network

@@ -1,0 +1,587 @@
+{# templates/home.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="nodeloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <div class="float-right text-right">
+                                    <span class="badge badge-light text-primary mt-2 mb-2 free_cru">Reserved + 11%</span> 
+                                    <p class="text-white-50 last_update">Updated Dec 2, 2018 1:30 PM</p>
+                                </div>
+                                
+                                <span class="peity-pie cru_chart" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"]}' data-width="54" data-height="54">5/8</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0 total_cru">Calculating</h5>
+                                <h6 class="mt-0 mb-3">C R U</h6>
+                                <p class="text-muted mb-0">Farm Cores <i class="ion-help-circled help-icon float-right" data-toggle="popover" data-placement="top" data-content="Total Compute Capacity on the Farm measured in Number of Cores."></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="nodeloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <div class="float-right text-right">
+                                    <span class="badge badge-light text-primary mt-2 mb-2 free_mru">Reserved + 27%</span> 
+                                    <p class="text-white-50 last_update">Updated Dec 2, 2018 1:30 PM</p>
+                                </div>
+                                
+                                <span class="peity-donut mru_chart" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">2/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0 total_mru">Calculating</h5>
+                                <h6 class="mt-0 mb-3">M R U</h6>
+                                <p class="text-muted mb-0">Farm Memory <i class="ion-help-circled help-icon float-right" data-toggle="popover" data-placement="top" data-content="Total Memory (Volatile Storage) of the Farm."></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="nodeloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <div class="float-right text-right">
+                                    <span class="badge badge-light text-primary mt-2 mb-2 free_hru">Reserved + 10%</span> 
+                                    <p class="text-white-50 last_update">Updated Dec 2, 2018 1:30 PM</p>
+                                </div>
+                                
+                                <span class="peity-pie hru_chart" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"]}' data-width="54" data-height="54">3/8</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0 total_hru">Calculating</h5>
+                                <h6 class="mt-0 mb-3">H R U</h6>
+                                <p class="text-muted mb-0">Farm HDD Storage <i class="ion-help-circled help-icon float-right" data-toggle="popover" data-placement="top" data-content="Total HDD Storage capacity of the Farm"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card mini-stats">
+                        <div class="nodeloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>
+                        <div class="p-3 mini-stats-content">
+                            <div class="mb-4">
+                                <div class="float-right text-right">
+                                    <span class="badge badge-light text-primary mt-2 mb-2 free_sru">Reserved + 89%</span> 
+                                    <p class="text-white-50 last_update">Updated Dec 2, 2018 1:30 PM</p>
+                                </div>
+                                <span class="peity-donut sru_chart" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"], "innerRadius": 18, "radius": 32 }' data-width="54" data-height="54">3/5</span>
+                            </div>
+                        </div>
+                        <div class="ml-3 mr-3">
+                            <div class="bg-white p-3 mini-stats-desc rounded">
+                                <h5 class="float-right mt-0 total_sru">Calculating</h5>
+                                <h6 class="mt-0 mb-3">S R U</h6>
+                                <p class="text-muted mb-0">Farm SSD Storage <i class="ion-help-circled help-icon float-right" data-toggle="popover" data-placement="top" data-content="Total SSD Storage capacity of the Farm."></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-xl-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="temperatueloder ajax_loder" ><div class="status"><div class="spinner"></div></div></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="mt-0 header-title mb-5">Temperatue</h4>
+                                </div>
+                                <div class="col-md-6 text-right pr-5">
+                                    <p class="temperatue_lastupdatetime">Last Updated December 4, 2018 1:53 AM</p>
+
+                                    <h3><i class="fa fa-thermometer-three-quarters"></i> <span class="temp_c">18</span> C</h3>
+                                </div>
+                            </div>
+                            <div id="morris-bar-stacked" class="morris-chart-height morris-charts"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="nodeloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>
+                            <h4 class="mt-0 header-title">Nodes Registration</h4>
+
+                            <div class="row text-center m-t-20">
+                                <div class="col-6">
+                                    <h5 class="online_node_count">132</h5>
+                                    <p class="text-muted font-14">Online</p>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="offile_node_count">15</h5>
+                                    <p class="text-muted font-14">Offline</p>
+                                </div>
+                            </div>
+
+                            <div id="morris-donut-example" class="dash-chart morris-charts text-center"></div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <!-- end row -->
+
+            
+
+            <!-- Custom charts -->
+          
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="temperatueloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>   
+                            <div class="row"> 
+                                <div class="col-md-6"> 
+                                    <h4 class="mt-0 header-title">LIGHT AND HUMIDITY</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="temperatue_lastupdatetime">Last Updated December 4, 2018 1:53 AM</p>
+                                </div>
+                            </div>
+                            <div class="row text-center m-t-20">
+                                <div class="col-6">
+                                    <h5 class="mb-0 Light" >4852</h5>
+                                    <p class="text-muted font-14">Light</p>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="mb-0 Humidity">85412</h5>
+                                    <p class="text-muted font-14">Humidity</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <canvas id="chartjs-5" class="chartjs" width="650" height="350" style="display: block; height: 345px; width: 690px;"> </canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="networkloder ajax_loder"><div class="status"><div class="spinner"></div></div></div>
+                            <div class="row" > 
+                                <div class="col-md-6"> 
+                                    <h4 class="mt-0 header-title">Network</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="network_lastupdatetime">Last Updated December 4, 2018 1:53 AM</p>
+                                </div>
+
+                                <div class="col-md-6 text-left mb-5 mt-5 pl-5"> 
+                                    <div class="network-heading">
+                                        <i class="fa fa-arrow-circle-o-up fa-lg pl-2 up_arrow"></i>
+                                        <p class="d-inline text-info font-weight-bold wan_up_text">23 Mbps - Up</p>
+                                    </div>
+                                    <div class="network-heading">
+                                        <i class="fa fa-arrow-circle-o-down fa-lg mt-3 pl-2"></i>
+                                        <p class="d-inline text-info font-weight-bold wan_down_text">21 Mbps - Down</p>
+                                    </div>
+                                    <div class="mt-5 text-center " style="padding-top: 25px;">
+                                        <input data-fgcolor="#040ed6" data-center-text="Up" data-max="25" data-skin="tron" data-readOnly="true" class="knob wan_up_chart" data-width="120" data-height="120"  value="">
+                                        <input data-fgcolor="#040ed6" data-center-text="Down" data-max="25" data-skin="tron" data-readOnly="true" class="knob wan_down_chart" data-width="120" data-height="120"  value="">
+                                    </div>
+                                     <h1 class="mt-0 header-title text-center">INTERNET</h1>
+                                </div>
+                                
+                                <div class="col-md-6 text-left mb-5 mt-5 pl-5"> 
+                                    <div class="network-heading">
+                                        <i class="fa fa-exchange fa-lg up_arrow"></i>
+                                        <p class="d-inline text-info font-weight-bold lan_throughput_text">990 Mbps - Throughput</p>                                            
+                                    </div>
+                                    <div class="mt-5 text-center" style="margin-top: 32% !important;">
+                                        <input data-fgcolor="#fdba45" data-center-text="Lan" data-skin="tron" data-max="1000" data-readOnly=true class="knob wan_lan_throughput" data-width="150" data-height="150"  value="">
+                                    </div>
+                                    <h2 class="mt-0 header-title text-center">LAN</h2>
+                                </div>  
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+
+
+            <!-- Datatable -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">      
+                        <div class="nodeloder ajax_loder" ><div class="status"><div class="spinner"></div></div></div>                          
+                            <div class="row">
+                                <div class="col-md-6">   
+                                    <h4 class="mt-0 header-title"><i class="ion-android-storage pr-2"></i>My Nodes</h4>
+                                    <p class="text-muted m-b-30 font-14">Click the on the NodeID below to see the details of the node.
+                                    </p>
+                                </div>
+                                <div class="col-md-6">   
+                                    <button onclick="nodes();" class="btn btn-info float-right">Refresh</button>
+                                </div>
+                            </div>
+
+                            <table id="nodelisting" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>NodeID</th>
+                                        <th>Node Robot Address</th>
+                                        <th>Node Status</th>
+                                        <th>Free CRU</th>
+                                        <th>Free MRU</th>
+                                        <th>Free HRU</th>
+                                        <th>Free SRU</th>
+                                        <th>Last Checked</th>
+                                        <th>Uptime</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody class="table_body">
+                                
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
+    </div>
+    <!-- end wrapper -->
+{% endblock %}
+
+{% block externaljavascripts %}
+    <!-- Datatable init js -->
+    <script src="{{ asset('assets/pages/datatables.init.js') }}"></script>
+    <script>
+        // This function created for get api data
+        function nodes() {
+            $.ajax({
+                url : '/api/nodes/RtasGhj890AsQwSd',
+                method : 'GET',
+                dataType: 'json',
+                
+                contentType: "application/json", 
+                headers: { 'X-AUTH-TOKEN': 'RtasGhj890AsQwSd' },        
+                beforeSend: function(){
+                    // Show image container
+                    $(".nodeloder").show();
+                    $(".nodeloder .status").show();
+                },    
+                success: function(data) {
+
+                    $(".last_update").html(data.last_updated_time); // for all farm section
+
+                    // For cru section
+                    $(".total_cru").html(data.total_cru.toFixed(2)); 
+                    $(".free_cru").html('Free '+ ((data.free_cru/data.total_cru)*100).toFixed(2)+'%'); 
+                    $(".cru_chart").html(data.free_cru.toFixed(2)+"/"+data.total_cru.toFixed(2));
+
+                    // For mru section
+                    $(".total_mru").html('GB '+data.total_mru.toFixed(2));
+                    $(".free_mru").html('Free '+ ((data.free_mru/data.total_mru)*100).toFixed(2)+'%');
+                    $(".mru_chart").html(data.free_mru.toFixed(2)+"/"+data.total_mru.toFixed(2));
+
+                    // For hru section
+                    $(".total_hru").html('TB '+data.total_hru.toFixed(2));
+                    $(".free_hru").html('Free '+ ((data.free_hru/data.total_hru)*100).toFixed(2)+'%');
+                    $(".hru_chart").html(data.free_hru.toFixed(2)+"/"+data.total_hru.toFixed(2));
+
+                    // For sru section
+                    $(".total_sru").html('TB '+data.total_sru.toFixed(2));
+                    $(".free_sru").html('Free '+ ((data.free_sru/data.total_sru)*100).toFixed(2)+'%');
+                    $(".sru_chart").html(data.free_sru.toFixed(2)+"/"+data.total_sru.toFixed(2));
+                   
+                    // pie
+                    $('.peity-pie').each(function () {
+                        $(this).peity("pie", $(this).data());
+                    });
+
+                    //donut
+                    $('.peity-donut').each(function () {
+                        $(this).peity("donut", $(this).data());
+                    });
+
+                    // line
+                    $('.peity-line').each(function () {
+                        $(this).peity("line", $(this).data());
+                    });
+                    
+                    /*NODES REGISTRATION*/
+                    $('.online_node_count').text(data.online);
+                    $('.offile_node_count').text(data.offline);
+
+                    //creating donut chart
+                    var $donutData = [
+                        {label: "Online", value: $('.online_node_count').text()},
+                        {label: "Offline", value: $('.offile_node_count').text()}
+                    ];
+                    $("#morris-donut-example").empty();
+                    $.Dashboard.createDonutChart('morris-donut-example', $donutData, ['#040ed6', '#1699dd']);
+
+                    var tabledata = [];
+                    
+                    // Get the array of keys
+                    var nodedata = Object.keys( data.data );
+                    nodedata.sort(function(a, b) {
+                        return a-b
+                    });
+                    console.log(nodedata);
+                    $.each(nodedata, function(key,value){
+                        var value = data.data[value];
+                        // For free cru
+                        var total_res = value.total_resources != undefined ? value.total_resources: 0;
+                        var total_res_cru = total_res.cru != undefined ? total_res.cru : 0;
+
+                        var reserved_res = value.reserved_resources != undefined ? value.reserved_resources: 0;
+                        var reserved_res_cru = reserved_res.cru != undefined ? reserved_res.cru : 0;
+
+                        var used_res = value.used_resources != undefined ? value.used_resources: 0;
+                        var used_res_cru = used_res.cru != undefined ? used_res.cru : 0;
+
+                        var freeCru = total_res_cru-used_res_cru-reserved_res_cru;
+
+                        // For free mru
+                        var total_res_mru = total_res.mru != undefined ? total_res.mru : 0;
+                        var reserved_res_mru = reserved_res.mru != undefined ? reserved_res.mru : 0;
+                        var used_res_mru = used_res.mru != undefined ? used_res.mru : 0;
+                        var freeMru = total_res_mru-used_res_mru-reserved_res_mru;
+
+                        // For free hru
+                        var total_res_hru = total_res.hru != undefined ? total_res.hru/1024 : 0;
+                        var reserved_res_hru = reserved_res.hru != undefined ? reserved_res.hru/1024 : 0;
+                        var used_res_hru = used_res.hru != undefined ? used_res.hru/1024 : 0;
+                        var freeHru = total_res_hru-used_res_hru-reserved_res_hru;
+
+                        // For free sru
+                        var total_res_sru = total_res.sru != undefined ? total_res.sru/1024 : 0;
+                        var reserved_res_sru = reserved_res.sru != undefined ? reserved_res.sru/1024 : 0;
+                        var used_res_sru = used_res.sru != undefined ? used_res.sru/1024 : 0;
+                        var freeSru = total_res_sru-used_res_sru-reserved_res_sru;
+
+                        var action = new Date(value.uptime);
+
+                        var status = "<span class='active_btn'> Active </span>";
+
+                        var model = '<a data-toggle="modal" class="nodeIdModal" href="#" data-target="#details_'+value.node_id+'">'+value.node_id+'</a>'+
+                                    '<div class="modal fade" id="details_'+value.node_id+'" role="dialog">'+
+                                        '<div class="modal-dialog modal-lg">'+
+                                          '<div class="modal-content">'+
+                                            '<div class="modal-header">'+
+                                              '<h4 class="modal-title float-left">Node details<img src="/assets/icons/Node_icon.svg" style="width: 31px;top: 25px;position: absolute;"></h4>'+
+                                              '<button type="button" class="close" data-dismiss="modal">&times;</button>'+
+                                            '</div>'+
+                                           ' <div class="modal-body">'+
+                                              '<div> <h6 class="d-inline"> Node ID: </h6><span>'+value.node_id+'</span></h6></div><br>'+
+                                              '<div> <h6 class="d-inline"> Node 0-robot address: </h6><span>'+value.robot_address+'</span></div><br>'+
+                                              '<div> <h6 class="d-inline"> OS version: </h6><span>'+value.os_version+'</span></div><br>'+
+                                              '<div> <h6 class="d-inline"> OS parameters: </h6><span> [ "'+value.parameters+'" ]</span></div><br>'+
+                                              '<div> <h6 class="d-inline"> Last update: </h6><span>'+value.updated+'</span></div><br>'+
+                                              '<div> <h6 class="d-inline"> Farm: Mazraa </h6></div><br>'+
+                                              '<table class="table table-bordered block"><tr><th>Resource units</th><th>CRU</th><th>MRU</th><th>HRU</th><th>SRU</th></tr>'+
+                                              '<tr><th>Total</th> <td>'+total_res_cru.toFixed(2)+'</td> <td>'+total_res_mru.toFixed(2)+'</td> <td>'+total_res_hru.toFixed(2)+'</td><td>'+total_res_sru.toFixed(2)+'</td></tr>'+
+                                              '<tr><th>Reserved</th><td>'+reserved_res_cru.toFixed(2)+'</td><td>'+reserved_res_mru.toFixed(2)+'</td><td>'+reserved_res_hru.toFixed(2)+'</td><td>'+reserved_res_sru.toFixed(2)+'</td></tr>'+
+                                              '<tr><th>Used</th><td>'+used_res_cru.toFixed(2)+'</td><td>'+used_res_mru.toFixed(2)+'</td><td>'+used_res_hru.toFixed(2)+'</td><td>'+used_res_sru.toFixed(2)+'</td></tr>'+
+                                              '<tr><th>Free</th><td>'+freeCru.toFixed(2)+'</td><td>'+freeMru.toFixed(2)+'</td><td>'+freeHru.toFixed(2)+'</td><td>'+freeSru.toFixed(2)+'</td></tr>'+
+                                              '</table>'+
+                                            '</div>'+
+                                            '<div class="modal-footer">'+
+                                                '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>'+
+                                            '</div>'+
+                                            '</div>'+
+                                        '</div>'+
+                                      '</div>';
+                         tabledata.push( [
+                                        model,
+                                        value.robot_address,
+                                        status,
+                                        freeCru.toFixed(2),
+                                        freeMru.toFixed(2),
+                                        freeHru.toFixed(2),
+                                        freeSru.toFixed(2),
+                                        value.updated,
+                                        action.getMinutes()+' min',
+                                    ] );
+                    });
+                    $('#nodelisting').DataTable({
+                        "data": tabledata,
+                        "destroy": true,
+                        "aaSorting": [],
+                        // "order": [[ 7, "asc" ]],
+                        "columns": [{"data": "0"}, {"data": "1"}, {"data": "2"}, {"data": "3"}, {"data": "4"}, {"data": "5"}, {"data": "6"}, {"data": "7"}, {"data": "8"}]
+                    });
+                    // Hide image container
+                    $(".nodeloder").hide();
+                    $(".nodeloder .status").hide();
+                },
+                error: function(data) {
+                    nodes();
+                }
+            });
+            $.ajax({
+                url : '/api/update/nodes/RtasGhj890AsQwSd',
+                method : 'GET',
+                dataType: 'json',
+                contentType: "application/json", 
+                headers: { 'X-AUTH-TOKEN': 'RtasGhj890AsQwSd' },  
+                              
+                success: function(data) {
+                }
+            });
+        }
+        function temperatue() {
+            $.ajax({
+                url : '/api/get/environment/RtasGhj890AsQwSd',
+                method : 'GET',
+                dataType: 'json',
+                
+                contentType: "application/json", 
+                headers: { 'X-AUTH-TOKEN': 'RtasGhj890AsQwSd' },     
+                beforeSend: function(){
+                    // Show image container
+                    $(".temperatueloder").show();
+                    $(".temperatueloder .status").show();
+                },    
+                success: function(data) {
+                    //creating donut chart
+                    $('.temperatue_lastupdatetime').text('Last Updated '+data.updatedata.envLastUpdate);
+                    $('.temp_c').text(data.updatedata.envTemp);
+                    $('.Light').text(data.updatedata.envLight);
+                    $('.Humidity').text(data.updatedata.envHumidity);
+                    Humidity(data.updatedata.envHumidity,data.updatedata.envLight);
+                    var $stckedData  = [
+                                        { y: '1H', a: data.H1H.envTemp },
+                                        { y: '2H', a: data.H2H.envTemp },
+                                        { y: '3H', a: data.H3H.envTemp },
+                                        { y: '4H', a: data.H4H.envTemp },
+                                        { y: '5H', a: data.H5H.envTemp },
+                                        { y: '6H', a: data.H6H.envTemp },
+                                        { y: '7H', a: data.H7H.envTemp },
+                                        { y: '8H', a: data.H8H.envTemp },
+                                        { y: '9H', a: data.H9H.envTemp },
+                                        { y: '10H', a: data.H10H.envTemp },
+                                        { y: '11H', a: data.H11H.envTemp },
+                                        { y: '12H', a: data.H12H.envTemp },
+                                        { y: '13H', a: data.H13H.envTemp },
+                                        { y: '14H', a: data.H14H.envTemp },
+                                        { y: '15H', a: data.H15H.envTemp },
+                                        { y: '16H', a: data.H16H.envTemp },
+                                        { y: '17H', a: data.H17H.envTemp },
+                                        { y: '18H', a: data.H18H.envTemp },
+                                        { y: '19H', a: data.H19H.envTemp },
+                                        { y: '20H', a: data.H20H.envTemp },
+                                        { y: '21H', a: data.H21H.envTemp },
+                                        { y: '22H', a: data.H22H.envTemp },
+                                        { y: '23H', a: data.H23H.envTemp },
+                                        { y: '24H', a: data.H24H.envTemp }
+                                    ];
+                    $("#morris-bar-stacked").empty();
+                    $.Dashboard.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a'], ['&#176;C'], ['#1699dd','#ebeff2']);
+                    // Hide image container
+                    $(".temperatueloder").hide();
+                    $(".temperatueloder .status").hide();
+
+                },
+                error: function(data) {
+                    temperatue();
+                }
+            });
+        }
+        function network() {
+            $.ajax({
+                url : '/api/get/network/RtasGhj890AsQwSd',
+                method : 'GET',
+                dataType: 'json',
+                contentType: "application/json", 
+                headers: { 'X-AUTH-TOKEN': 'RtasGhj890AsQwSd' },     
+                beforeSend: function(){
+                    // Show image container
+                    $(".networkloder").show();
+                    $(".networkloder .status").show();
+                },    
+                success: function(data) {
+                    /*update text*/
+                    $('.network_lastupdatetime').html('Last Updated '+data.LastUpdate);
+                    $('.wan_up_text').html(data.wan_up+' Mbps - Up');
+                    $('.wan_down_text').html(data.wan_down+' Mbps - Down');
+                    $('.lan_throughput_text').html(data.lan_throughput+' Mbps - Throughput');
+                    $('.wan_lan_throughput').attr('data-center-text', data.lan_throughput);
+                    $('.wan_lan_throughput').attr('data-max', data.lan_min_throughput);
+                    $('.wan_up_chart').attr('data-max', data.wan_min_up);
+                    $('.wan_down_chart').attr('data-max', data.wan_min_down);
+
+                    /*update and creating chart*/
+                    $('.wan_up_chart').attr('value', data.wan_up);
+                    $('.wan_down_chart').attr('value', data.wan_down);
+                    $('.wan_lan_throughput').attr('value', data.lan_throughput);
+                    $(".knob").knob();
+                    // Hide image container
+                    $(".networkloder").hide();
+                    $(".networkloder .status").hide();
+
+                },
+                error: function(data) {
+                    network();
+                }
+            });
+        }
+        function Humidity(Humidity,Light) {
+            new Chart(document.getElementById("chartjs-5"),{
+                        type:"polarArea",
+                        segmentShowStroke: false,
+                        data:{
+                            labels:["Light", "", "Humidity"],
+                            fontColor: 'black',
+                            scaleFontColor: "black",
+
+                            datasets:[{
+                                        label:"My dataset",
+                                        data:[Light, 0, Humidity],
+                                        backgroundColor:["rgba(75,205,147,0.5)", "#fff", "rgba(48,15,214,0.5)"],
+                                         fillColor: "rgba(255, 152, 0, 0.30)",
+                                        }]
+                       },
+                   });
+        }
+        function startTime() {
+            var today=new Date();
+            var h=today.getHours();
+                    var am_pm = today.getHours() >= 12 ? "PM" : "AM";
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            // add a zero in front of numbers<10
+            m=checkTime(m);
+            s=checkTime(s);
+            document.getElementById('realtime').innerHTML=h+" : "+m+" : "+s + " " + am_pm;;
+            t=setTimeout('startTime()',500);
+        }
+
+        function checkTime(i) {
+            if (i<10)
+            {
+            i="0" + i;
+            }
+            return i;
+        }
+    </script>
+{% endblock %}
