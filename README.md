@@ -9,3 +9,7 @@ status.mazraa.io
 * HTML / CSS 
 * Python
 
+## URL https://status.mazraa.io/
+user = admin
+Pass = MZ9278
+
