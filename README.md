@@ -8,6 +8,7 @@ status.mazraa.io
 * JavaScript | Jquery | AJAX
 * HTML / CSS 
 * Python
+* MYSQL
 
 ## URL https://status.mazraa.io/
 user = admin
