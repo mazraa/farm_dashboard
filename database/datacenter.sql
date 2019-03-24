@@ -231,7 +231,7 @@ CREATE TABLE `dc_profile` (
 
 LOCK TABLES `dc_profile` WRITE;
 /*!40000 ALTER TABLE `dc_profile` DISABLE KEYS */;
-INSERT INTO `dc_profile` VALUES (1,'Mazraa','admin','YutrEspIuslda','2018-12-30 09:06:49'),(2,'Mazraa','kamlesh','4297f44b13955235245b2497399d7a93','2019-01-02 09:54:33'),(3,'Mazraa','admin','d6d97112b8092f5e25b613226afb4ca7','2019-01-02 09:58:12');
+INSERT INTO `dc_profile` VALUES (1,'Mazraa','admin','YutrEspIuslda','2018-12-30 09:06:49'),(2,'Mazraa','abdul','4297f44b13955235245b2497399d7a93','2019-01-02 09:54:33'),(3,'Mazraa','admin','d6d97112b8092f5e25b613226afb4ca7','2019-01-02 09:58:12');
 /*!40000 ALTER TABLE `dc_profile` ENABLE KEYS */;
 UNLOCK TABLES;
 

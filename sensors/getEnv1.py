@@ -1,7 +1,7 @@
 import re
 import json
 import urllib2
-url = "http://api.ubibot.io/channels/1405?account_key=860a553576d7dea6d511bf67b565f1b8"
+url = "http://api.ubibot.io/channels/2723?account_key=860a553576d7dea6d511bf67b565f1b8"
 response = urllib2.urlopen(url)
 data = response.read()
 values = json.loads(data)
