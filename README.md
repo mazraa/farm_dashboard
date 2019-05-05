@@ -12,5 +12,6 @@ status.mazraa.io
 
 ## URL https://status.mazraa.io/
 user = admin
-Pass = MZ9278
+Pass = MZ9278 
+
 
